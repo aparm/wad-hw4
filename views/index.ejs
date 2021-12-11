@@ -3,20 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Home</title>
+
+    <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
-
-<nav>
-    <a href="/">Home </a> |
-    <a href="/posts">Posts page</a> |
-    <a href="/addnewpost">New post</a>
-</nav>
-
-<h1>Home page</h1>
-
-<footer class="footer">
-    <p>© WAD 2021 </p>
-</footer>
-
+<%- include('partials/header'); %>
+<main>
+    <h1>Home page</h1>
+</main>
+<%- include('partials/footer'); %>
 </body>
 </html>

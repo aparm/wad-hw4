@@ -7,8 +7,10 @@
     <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
-<h1>Posts</h1>
+<%- include('partials/header'); %>
+<main>
 
+<h1>Posts</h1>
 
 <div class="posts list">
 
@@ -41,7 +43,9 @@
     <% } else { %>
     <h2>You did not post anything!</h2>
     <% } %>
-
 </div>
+
+</main>
+<%- include('partials/footer'); %>
 </body>
 </html>

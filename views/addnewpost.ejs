@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<nav>
+    <a href="/">Home </a> |
+    <a href="/posts">Posts page</a> |
+    <a href="/contactus">Contact us</a>
+</nav>
+
+<h1>Create a new post</h1>
+
+<div class="create-post">
+    <form action="/posts" method="POST">
+        <label for="posttext">Post text:</label>
+        <input type="text" id="text" name="posttext" required><br><br>
+        <label for="image"> Image URL link:</label>
+        <input type="text" id="image" name="image"></textarea><br><br>
+        <button>Submit</button>
+    </form>
+</div>
+
+
+
+
+<footer class="footer">
+    <p>© WAD 2021 </p>
+</footer>
+
+</body>
+</html>

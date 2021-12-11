@@ -65,6 +65,21 @@ main {
     background-color: royalblue;
 }
 
+.delete {
+    background-color: dimgray;
+    border-radius: 5px;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    float: right;
+}
+
+.delete:hover {
+    background-color: #f44336;
+}
+
 
 /* Header */
 header {

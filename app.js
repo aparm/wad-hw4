@@ -67,6 +67,22 @@ app.get('/singlepost/:id', async(req, res) => {
 });
 
 
+app.delete('/posts/:id', async(req, res) => {
+    try {
+        console.log(req.params);
+        const { id } = req.params;
+
+        console.log("delete a post request has arrived");
+        const deletepost = await pool.query(
+            "DELETE FROM posts WHERE id = $1", [id]
+        );
+        res.redirect('posts');
+    } catch (err) {
+        console.error(err.message);
+    }
+});
+
+
 app.use(express.static("public"));
 
 app.use((req, res) => {

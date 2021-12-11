@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Posts</h1>
+
+
+<div class="posts list">
+
+
+    <%if (posts.length > 0) { %>
+
+        <h2>All posts</h2>
+        <% posts.forEach(post => { %>
+
+            <h3 class="title">
+                <%= post.title %>
+            </h3>
+            <p class="body">
+                <%= post.body %>
+            </p>
+
+            <div class="post">
+                <div class="post-info">
+                    <img class="post-author-photo" src="<%= post.authorPhoto %>">
+                    <p class="date"><%= post.date %></p>
+                </div>
+                <img class="post-image" src="<%= post.image %>">
+                <p class="post-text"><%= post.text %></p>
+                <button class="like-button" > <%= post.likes %></button>
+            </div>
+
+
+        <% }) %>
+
+    <% } else { %>
+    <h2>You did not post anything!</h2>
+    <% } %>
+
+</div>
+</body>
+</html>

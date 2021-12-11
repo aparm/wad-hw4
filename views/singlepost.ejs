@@ -18,7 +18,7 @@
         </div>
         <img class="post-image" src="<%= post.image %>">
         <p class="post-text"><%= post.text %></p>
-        <button class="like-button" > <%= post.likes %></button>
+        <button class="like-button" data-id="<%= post.id %>"> <%= post.likes %></button>
 
         <a class="delete" data-del="<%= post.id %>">Delete</a>
     </div>
@@ -31,6 +31,15 @@
                 method: 'DELETE',
             }).then(window.location.href = '/posts')
         });
+
+        const likereq = document.querySelector('button.like-button');
+        likereq.addEventListener('click', (e) => {
+            const endpoint = `/posts/${likereq.dataset.id}`;
+            fetch(endpoint, {
+                method: 'PUT',
+            }).then(window.location.reload());
+        });
+
     </script>
 
 </main>

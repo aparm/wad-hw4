@@ -19,17 +19,19 @@
 
         <h2>All posts</h2>
         <% posts.forEach(post => { %>
-            <a href="/singlepost/<%= post.id %>">
-                <div class="post">
-                    <div class="post-info">
-                        <img class="post-author-photo" src="<%= post.authorPhoto %>">
-                        <p class="date"><%= post.date %></p>
+            <div class="post">
+                <a href="/singlepost/<%= post.id %>">
+                    <div>
+                        <div class="post-info">
+                            <img class="post-author-photo" src="<%= (post.authorPhoto != null) ? post.authorPhoto : '/assets/user.png' %>">
+                            <p class="date"><%= post.date %></p>
+                        </div>
+                        <img class="post-image" src="<%= post.image %>">
+                        <p class="post-text"><%= post.text %></p>
                     </div>
-                    <img class="post-image" src="<%= post.image %>">
-                    <p class="post-text"><%= post.text %></p>
-                    <button class="like-button" > <%= post.likes %></button>
-                </div>
-            </a>
+                </a>
+                <button class="like-button" data-id="<%= post.id %>"> <%= post.likes %></button>
+            </div>
         <% }) %>
 
     <% } else { %>

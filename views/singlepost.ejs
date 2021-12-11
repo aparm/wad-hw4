@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Post</title>
+
+    <link href="../css/style.css" rel="stylesheet">
+</head>
+<body>
+<%- include('partials/header'); %>
+<main>
+    <h1>Post</h1>
+
+    <div class="post">
+        <div class="post-info">
+            <img class="post-author-photo" src="<%= post.authorPhoto %>">
+            <p class="date"><%= post.date %></p>
+        </div>
+        <img class="post-image" src="<%= post.image %>">
+        <p class="post-text"><%= post.text %></p>
+        <button class="like-button" > <%= post.likes %></button>
+
+
+    </div>
+
+
+</main>
+<%- include('partials/footer'); %>
+</body>
+</html>
